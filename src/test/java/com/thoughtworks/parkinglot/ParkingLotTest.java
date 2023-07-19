@@ -52,4 +52,13 @@ public class ParkingLotTest {
 
         assertThat(parkingLot.isParked(car), is(false));
     }
+
+    @Test
+    void shouldUnPackACarWhenCarIsNotParked() throws ParkingLotFullException, NotParkedException, AlreadyParkedException{
+        ParkingLot parkingLot = new ParkingLot(2);
+        Parkable car = new Car();
+
+        assertThrows(NotParkedException.class,()-> parkingLot.unpark(car));
+
+    }
 }
