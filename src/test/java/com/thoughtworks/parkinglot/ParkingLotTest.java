@@ -54,7 +54,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    void shouldUnPackACarWhenCarIsNotParked() throws ParkingLotFullException, NotParkedException, AlreadyParkedException{
+    void shouldUnPackACarWhenCarIsNotParked() throws NotParkedException{
         ParkingLot parkingLot = new ParkingLot(2);
         Parkable car = new Car();
 
